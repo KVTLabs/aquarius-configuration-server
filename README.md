@@ -227,13 +227,10 @@ datos SQL Server mediante JDBC.
 
 ```mermaid
 flowchart TD
-    A[Microservicio Cliente] --> B[Spring Cloud Config Client]
-    B --> C[Aquarius Configuration Server]
-    C --> D[(SQL Server)]
-
-    C -->|Ejecuta QUERY| D
-    D -->|KEY / VALUE| C
-    C -->|Property Sources| A
+    A[Microservicio] -->|Comparte aplicacion/perfil/label| B[Aquarius Configuration Server]
+    B -->|Ejecuta Query| C[(SQL Server)]
+    C -->|Responde propiedades| B
+    B -->|Comparte propiedades| A
 ```
 
 ### Flujo de la solicitud

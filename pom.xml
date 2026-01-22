@@ -6,12 +6,12 @@
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
         <version>4.0.1</version>
-        <relativePath/> <!-- lookup parent from repository -->
+        <relativePath/>
     </parent>
 
     <groupId>com.github.kvtlabs.aquarius</groupId>
     <artifactId>aquarius-configuration-server</artifactId>
-    <version>0.1.0</version>
+    <version>1.0.0</version>
     <name>${project.artifactId}</name>
     <description>Demo project for Spring Boot</description>
 
@@ -52,8 +52,8 @@
                 <activeByDefault>true</activeByDefault>
             </activation>
             <properties>
-                <spring.profiles.active>mssql</spring.profiles.active>
-                <spring.profiles.include>jdbc</spring.profiles.include>
+                <spring.profiles.active>jdbc</spring.profiles.active>
+                <spring.profiles.include>mssql</spring.profiles.include>
             </properties>
         </profile>
     </profiles>
